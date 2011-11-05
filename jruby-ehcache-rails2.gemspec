@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Dylan Stamat", "Jason Voegele"]
-  s.date = %q{2011-11-03}
+  s.date = %q{2011-11-05}
   s.default_executable = %q{ehcache}
   s.description = %q{Rails 2 cache store provider using Ehcache}
   s.email = ["dstamat@elctech.com", "jvoegele@terracotta.org"]
@@ -19,7 +19,8 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     "lib/active_support/cache/ehcache_store.rb",
-    "lib/ehcache/rails/ehcache_rails_common.rb"
+    "lib/active_support/ehcache_store.rb",
+    "lib/ehcache/active_support_store.rb"
   ]
   s.homepage = %q{http://ehcache.rubyforge.org}
   s.require_paths = ["lib"]
@@ -36,10 +37,14 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<jruby-ehcache>, [">= 0"])
       s.add_development_dependency(%q<rake>, [">= 0"])
       s.add_development_dependency(%q<jeweler>, [">= 0"])
+      s.add_development_dependency(%q<rake>, [">= 0"])
+      s.add_development_dependency(%q<jeweler>, [">= 0"])
       s.add_runtime_dependency(%q<jruby-ehcache>, [">= 1.1.2"])
     else
       s.add_dependency(%q<jruby-ehcache>, [">= 1.1.2"])
       s.add_dependency(%q<jruby-ehcache>, [">= 0"])
+      s.add_dependency(%q<rake>, [">= 0"])
+      s.add_dependency(%q<jeweler>, [">= 0"])
       s.add_dependency(%q<rake>, [">= 0"])
       s.add_dependency(%q<jeweler>, [">= 0"])
       s.add_dependency(%q<jruby-ehcache>, [">= 1.1.2"])
@@ -47,6 +52,8 @@ Gem::Specification.new do |s|
   else
     s.add_dependency(%q<jruby-ehcache>, [">= 1.1.2"])
     s.add_dependency(%q<jruby-ehcache>, [">= 0"])
+    s.add_dependency(%q<rake>, [">= 0"])
+    s.add_dependency(%q<jeweler>, [">= 0"])
     s.add_dependency(%q<rake>, [">= 0"])
     s.add_dependency(%q<jeweler>, [">= 0"])
     s.add_dependency(%q<jruby-ehcache>, [">= 1.1.2"])
